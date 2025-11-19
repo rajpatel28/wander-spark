@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+
+header {
+    padding: 20px;
+    background: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
