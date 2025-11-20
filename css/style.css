@@ -5,6 +5,7 @@ body {
     background: #fafafa;
 }
 
+/* HEADER */
 header {
     padding: 20px;
     background: #222;
@@ -14,22 +15,66 @@ header {
     align-items: center;
 }
 
+.site-header {
+  text-align: center;
+  padding: 1rem 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.title-wrap {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+.site-subtitle {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #eaeaea;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
 nav a {
     color: white;
     margin-left: 15px;
+    margin-right: 30px;
     text-decoration: none;
 }
 
+nav a i {
+  font-size: 1.2rem;
+  transition: 0.2s ease-in-out;
+}
+
+nav a i:hover {
+  transform: scale(1.2);
+}
+
+/* HERO SECTION */
 .vancouver-hero {
   background-image: url('../assets/vancouver-hero.jpg');
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 50px 20px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
+/* GRID LAYOUTS */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -59,18 +104,12 @@ nav a {
     height: 150px;
     object-fit: cover;
     display: block;
-    filter: brightness(60%); /* dim the image to 60% brightness */
-    transition: filter 0.3s ease, opacity 0.8s ease;
     opacity: 0;
+    transition: opacity 0.8s ease;
 }
 
 .card img.loaded {
     opacity: 1;
-}
-
-/* Optional: brighten slightly on hover for effect */
-.card:hover img {
-    filter: brightness(70%);
 }
 
 .card::after {
@@ -82,10 +121,10 @@ nav a {
     pointer-events: none;
 }
 
+/* Title overlay on image cards */
 .card-title {
     position: absolute;
     bottom: 12px;
-    width: auto;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -96,7 +135,7 @@ nav a {
     color: #fff;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
     padding: 6px 12px;
-    background-color: rgba(0,0,0,0.4); /* subtle black behind text */
+    background-color: rgba(0,0,0,0.4);
     border-radius: 6px;
 }
 
@@ -105,6 +144,7 @@ nav a {
     box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
 
+/* TABLE STYLING */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -126,21 +166,20 @@ table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Medium screens (tablet) */
+/* RESPONSIVE BREAKPOINTS */
 @media (min-width: 600px) {
   .card-grid {
-    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Large screens (desktop) */
 @media (min-width: 900px) {
   .card-grid {
-    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-/* Card styling */
+/* ACTIVITY CARDS */
 .activity-card {
   background: #fff;
   border-radius: 10px;
@@ -172,7 +211,7 @@ table tr:nth-child(even) {
   padding-bottom: 5px;
 }
 
-/* Filter button container */
+/* FILTER BUTTONS */
 .filters {
   position: sticky;
   top: 0;
@@ -181,9 +220,8 @@ table tr:nth-child(even) {
   z-index: 100;
 }
 
-/* Style for all filter buttons */
 .filters button {
-    background-color: #4CAF50; /* green-ish, adjust to your theme */
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 18px;
@@ -194,15 +232,13 @@ table tr:nth-child(even) {
     transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .filters button:hover {
-    background-color: #45a049; /* slightly darker green */
+    background-color: #45a049;
     transform: translateY(-2px);
 }
 
-/* Active / clicked button style */
 .filters button.active {
-    background-color: #357a38; /* darker to show selected */
+    background-color: #357a38;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
