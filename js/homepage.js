@@ -62,7 +62,7 @@ async function loadCityCards() {
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-            <a href="Cities/${city.name.toLowerCase()}.html">
+            <a href="cities/${city.name.toLowerCase()}.html">
                 <img src="${imgUrl}" alt="${city.name}">
                 <div class="card-title">${city.name}</div>
             </a>
