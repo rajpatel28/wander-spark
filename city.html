@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>City Guide</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* Basic reset and typography */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: #fafafa;
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Header */
+        header.main-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header .city-info {
+            flex: 1;
+        }
+        header #city-title {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        header #city-tagline {
+            margin: 0.25rem 0 0;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #555;
+        }
+        header .home-icon {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        header .home-icon:hover,
+        header .home-icon:focus {
+            background-color: #e0e0e0;
+            outline: none;
+        }
+
+        /* Hero */
+        #hero {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            max-height: 500px;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        #hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                rgba(0,0,0,0.5),
+                rgba(0,0,0,0.3) 40%,
+                rgba(0,0,0,0.7)
+            );
+            z-index: 1;
+        }
+        #hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 90%;
+        }
+        #hero-text h1 {
+            margin: 0 0 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+        }
+        #hero-text p {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+        }
+
+        /* Main content wrapper */
+        main {
+            flex: 1 0 auto;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Section headings */
+        h2.section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 0.25rem;
+        }
+
+        /* Filters placeholder */
+        #filters {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Activities container */
+        #activity-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Activity card */
+        .activity-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .activity-card:hover,
+        .activity-card:focus-within {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+            outline: none;
+        }
+        .activity-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+        .activity-content {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .activity-title {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #007acc;
+        }
+        .activity-description {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 1rem;
+            color: #444;
+        }
+        .activity-link {
+            margin-top: 1rem;
+            align-self: flex-start;
+            text-decoration: none;
+            color: #007acc;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .activity-link:hover,
+        .activity-link:focus {
+            color: #004a99;
+            outline: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header.main-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+            header .home-icon {
+                align-self: flex-end;
+                font-size: 1.75rem;
+            }
+            #hero {
+                height: 40vh;
+            }
+            #hero-text h1 {
+                font-size: 1.75rem;
+            }
+            #hero-text p {
+                font-size: 1rem;
+            }
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <div class="city-info">
+            <h1 id="city-title" tabindex="0"></h1>
+            <p id="city-tagline"></p>
+        </div>
+        <a href="index.html" class="home-icon" aria-label="Go to home page" title="Home">🏠</a>
+    </header>
+
+    <section id="hero" role="region" aria-label="City hero image and introduction">
+        <div id="hero-text" aria-live="polite">
+            <h1></h1>
+            <p></p>
+        </div>
+    </section>
+
+    <main>
+        <section class="activity-section" aria-labelledby="activities-title">
+            <h2 id="activities-title" class="section-title">Top Things To Do</h2>
+            <div id="filters" aria-label="Filters for activities">
+                <!-- Future filters or content will be injected here -->
+            </div>
+            <div id="activity-container" aria-live="polite" aria-relevant="additions"></div>
+        </section>
+    </main>
+
+    <script src="js/cities.js"></script>
+    <script src="js/city-loader.js"></script>
+</body>
+</html>

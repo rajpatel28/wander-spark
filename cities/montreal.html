@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montreal Travel Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="title-wrap">
+        <h1 class="site-title">Wander Spark</h1>
+        <p class="site-subtitle">Explore smarter. Travel bolder.</p>
+    </div>
+    <nav class="main-nav">
+        <a href="../index.html" title="Home"><i class="fa-solid fa-house"></i></a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="vancouver-hero" style="background-image:url('../assets/montreal-hero.jpg')">
+    <h1>Montreal</h1>
+    <p>Top things to do and experience</p>
+</section>
+
+<!-- Filters -->
+<div class="filters">
+    <button onclick="filterActivities('all')">All</button>
+    <button onclick="filterActivities('free')">Free</button>
+    <button onclick="filterActivities('paid')">Paid</button>
+</div>
+
+<!-- Old Montreal -->
+<section class="vancouver-area">
+    <h2>Old Montreal (Vieux-Montréal)</h2>
+    <div class="card-grid">
+
+        <div class="activity-card free" data-photo="Old Montreal Vieux Montréal streets">
+            <img class="activity-img" />
+            <h3>Old Montreal</h3>
+            <p><strong>Highlights:</strong> Cobblestone streets, historic architecture, cafés, river views.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Go early morning for the best photos and empty streets.</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="Notre Dame Basilica Montreal interior">
+            <img class="activity-img" />
+            <h3>Notre-Dame Basilica</h3>
+            <p><strong>Highlights:</strong> Stunning blue-and-gold interior, Gothic Revival design, the Aura light show.</p>
+            <p><strong>Cost:</strong> ~$15 (Aura show extra)</p>
+            <p><strong>Tips:</strong> Buy tickets online — lines can get crazy.</p>
+        </div>
+
+        <div class="activity-card free paid" data-photo="Old Port Montreal Old Port Vieux Port">
+            <img class="activity-img" />
+            <h3>Old Port of Montreal</h3>
+            <p><strong>Highlights:</strong> Waterfront promenade, street performers, ferris wheel, lively atmosphere.</p>
+            <p><strong>Cost:</strong> Free (activities extra)</p>
+            <p><strong>Tips:</strong> Visit around sunset for great views and photos.</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="Montreal Observation Wheel Grande Roue de Montréal">
+            <img class="activity-img" />
+            <h3>La Grande Roue</h3>
+            <p><strong>Highlights:</strong> 60-meter ferris wheel with panoramic views of the city.</p>
+            <p><strong>Cost:</strong> ~$20–25</p>
+            <p><strong>Tips:</strong> Go on a clear day — reflections ruin night photos.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Downtown & Mount Royal -->
+<section class="vancouver-area">
+    <h2>Downtown & Mount Royal</h2>
+    <div class="card-grid">
+
+        <div class="activity-card free" data-photo="Montreal Underground City RESO">
+            <img class="activity-img" />
+            <h3>Underground City (RESO)</h3>
+            <p><strong>Highlights:</strong> 33 km of tunnels connecting malls, metros, eateries, and plazas.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Perfect for rainy or freezing days — it’s huge, so follow signage.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="St Catherine Street Montreal shopping">
+            <img class="activity-img" />
+            <h3>St. Catherine Street</h3>
+            <p><strong>Highlights:</strong> Montreal’s main shopping and nightlife strip.</p>
+            <p><strong>Cost:</strong> Free to explore</p>
+            <p><strong>Tips:</strong> Pedestrian-only sections in summer are great for cafés and people-watching.</p>
+        </div>
+
+        <div class="activity-card paid free" data-photo="Montreal Museum of Fine Arts">
+            <img class="activity-img" />
+            <h3>Montreal Museum of Fine Arts</h3>
+            <p><strong>Highlights:</strong> Canada’s largest art museum, sculptures, world-class temporary exhibits.</p>
+            <p><strong>Cost:</strong> ~$25</p>
+            <p><strong>Tips:</strong> Free admission for the sculpture garden outside.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Mount Royal Montreal viewpoint Kondiaronk Belvedere">
+            <img class="activity-img" />
+            <h3>Mount Royal Lookout</h3>
+            <p><strong>Highlights:</strong> Best skyline view in Montreal, overlooking downtown and the river.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Sunset is unreal — but sunrise has zero crowds.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Mount Royal Park Montreal Parc du Mont Royal">
+            <img class="activity-img" />
+            <h3>Mount Royal Park</h3>
+            <p><strong>Highlights:</strong> Scenic trails, wildlife, lake, picnic spots.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> The loop around Beaver Lake is peaceful and less touristy.</p>
+        </div>
+
+        <div class="activity-card free paid" data-photo="St Joseph Oratory Montreal">
+            <img class="activity-img" />
+            <h3>St. Joseph’s Oratory</h3>
+            <p><strong>Highlights:</strong> Canada’s largest church, domed basilica, panoramic terrace.</p>
+            <p><strong>Cost:</strong> Free entry (donation encouraged)</p>
+            <p><strong>Tips:</strong> The viewpoint behind the basilica is a hidden gem.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Plateau & Mile-End -->
+<section class="vancouver-area">
+    <h2>Plateau & Mile-End</h2>
+    <div class="card-grid">
+
+        <div class="activity-card free" data-photo="St Louis Square Montreal Plateau houses">
+            <img class="activity-img" />
+            <h3>Square Saint-Louis</h3>
+            <p><strong>Highlights:</strong> Famous pastel houses, romantic park, leafy paths.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Great for photos in the afternoon when the light hits the façades.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Montreal Mile End neighborhood">
+            <img class="activity-img" />
+            <h3>Mile-End</h3>
+            <p><strong>Highlights:</strong> Vintage shops, indie cafés, murals, artsy vibes.</p>
+            <p><strong>Cost:</strong> Free to explore</p>
+            <p><strong>Tips:</strong> Try St-Viateur or Fairmount for authentic Montreal bagels.</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="St Viateur Bagel Montreal">
+            <img class="activity-img" />
+            <h3>St-Viateur Bagel</h3>
+            <p><strong>Highlights:</strong> Iconic Montreal-style wood-fired bagels.</p>
+            <p><strong>Cost:</strong> Price varies </p>
+            <p><strong>Tips:</strong> They bake 24/7 — late-night bagels hit different.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Montreal murals St Laurent street art">
+            <img class="activity-img" />
+            <h3>Montreal Street Art (St-Laurent)</h3>
+            <p><strong>Highlights:</strong> Massive murals, art festivals, colorful blocks.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> The MURAL Festival in June adds new pieces yearly.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Jean-Talon Market -->
+<section class="vancouver-area">
+    <h2>Little Italy & Markets</h2>
+    <div class="card-grid">
+
+        <div class="activity-card free paid" data-photo="Jean Talon Market Montreal">
+            <img class="activity-img" />
+            <h3>Jean-Talon Market</h3>
+            <p><strong>Highlights:</strong> Local produce, spices, bakeries, flowers.</p>
+            <p><strong>Cost:</strong> Free entry</p>
+            <p><strong>Tips:</strong> Vendors often offer samples — taste everything.</p>
+        </div>
+
+        <div class="activity-card free paid" data-photo="Little Italy Montreal">
+            <img class="activity-img" />
+            <h3>Little Italy</h3>
+            <p><strong>Highlights:</strong> Espresso bars, trattorias, Italian grocery stores.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Grab gelato from a local shop nearby.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Olympic Park -->
+<section class="vancouver-area">
+    <h2>Olympic Park & Surroundings</h2>
+    <div class="card-grid">
+
+        <div class="activity-card paid" data-photo="Montreal Biodome">
+            <img class="activity-img" />
+            <h3>Biodôme</h3>
+            <p><strong>Highlights:</strong> Walk through recreated ecosystems from rainforest to arctic.</p>
+            <p><strong>Cost:</strong> ~$22–30</p>
+            <p><strong>Tips:</strong> Weekdays are WAY less crowded.</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="Montreal Planetarium Rio Tinto">
+            <img class="activity-img" />
+            <h3>Planetarium</h3>
+            <p><strong>Highlights:</strong> Immersive shows, astronomy exhibits.</p>
+            <p><strong>Cost:</strong> ~$20–25</p>
+            <p><strong>Tips:</strong> Arrive 15 min early — shows do not allow late entry.</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="Montreal Tower Olympic Stadium">
+            <img class="activity-img" />
+            <h3>Montreal Tower Observatory</h3>
+            <p><strong>Highlights:</strong> World’s tallest inclined tower with panoramic windows.</p>
+            <p><strong>Cost:</strong> ~$22</p>
+            <p><strong>Tips:</strong> Visit on a clear day — fog ruins the view.</p>
+        </div>
+
+    </div>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

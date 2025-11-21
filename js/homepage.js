@@ -4,6 +4,7 @@ const UNSPLASH_ACCESS_KEY = ""; // leave empty to skip Unsplash
 // List your cities here
 const cities = [
     { name: "Vancouver", query: "Vancouver skyline" },
+    { name: "Ottawa", query: "Ottawa Canada skyline parliament" },
     { name: "Montreal"},
     { name: "Quebec City" }, // query will default to name
     // Add more cities here

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ottawa Travel Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="title-wrap">
+        <h1 class="site-title">Wander Spark</h1>
+        <p class="site-subtitle">Explore smarter. Travel bolder.</p>
+    </div>
+
+    <nav class="main-nav">
+        <a href="../index.html" title="Home"><i class="fa-solid fa-house"></i></a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="vancouver-hero" style="background-image:url('../assets/ottawa-hero.jpg')">
+    <h1>Ottawa</h1>
+    <p>Top things to do and experience</p>
+</section>
+
+<!-- Filters -->
+<div class="filters">
+    <button onclick="filterActivities('all')">All</button>
+    <button onclick="filterActivities('free')">Free</button>
+    <button onclick="filterActivities('paid')">Paid</button>
+</div>
+
+<!-- Downtown & Parliament Hill -->
+<section class="vancouver-area">
+    <h2>Downtown & Parliament Hill</h2>
+    <div class="card-grid">
+
+        <div class="activity-card free paid" data-photo="Ottawa Byward Market">
+            <img class="activity-img" />
+            <h3>ByWard Market</h3>
+            <p><strong>Highlights:</strong> Historic open-air market with artisan stalls, fresh produce, local boutiques, cafés, and Ottawa’s iconic BeaverTails.</p>
+            <p><strong>Cost:</strong> Free (food and shopping extra)</p>
+            <p><strong>Tips:</strong> Visit in the morning for quieter browsing; evenings get lively with patios and street performers.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Ottawa Locks Rideau Canal">
+            <img class="activity-img" />
+            <h3>Ottawa Locks</h3>
+            <p><strong>Highlights:</strong> Historic hand-operated locks connecting the Rideau Canal to the Ottawa River; scenic viewpoints and perfect photo spots.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Walk the pathway beside the locks for great angles of the Chateau Laurier and Parliament Hill.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Parliament Hill Ottawa">
+            <img class="activity-img" />
+            <h3>Parliament Hill</h3>
+            <p><strong>Highlights:</strong> Canada’s most iconic landmark with Gothic Revival architecture, sweeping river views, and historic grounds.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Free tours to the Parliament can be booked in advance. Early mornings offer the best lighting and minimal crowds for photos.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Peace Tower Ottawa">
+            <img class="activity-img" />
+            <h3>Peace Tower</h3>
+            <p><strong>Highlights:</strong> Iconic Parliament bell tower, memorial chamber, and panoramic views from the observation area.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Go right at opening — security lines get long later in the day.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="National War Memorial Ottawa">
+            <img class="activity-img" />
+            <h3>National War Memorial</h3>
+            <p><strong>Highlights:</strong> Iconic granite arch, Tomb of the Unknown Soldier, and ceremonial Changing of the Guard during summer months.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Visit at sunset for dramatic lighting; mornings are calm if you want quiet photos.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Confederation Park Ottawa">
+            <img class="activity-img" />
+            <h3>Confederation Park</h3>
+            <p><strong>Highlights:</strong> Peaceful urban park with memorial sculptures, fountains, tree-lined paths, and easy access to nearby landmarks.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> A great place for a mid-day break — shaded benches and close to ByWard Market for snacks.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Museums -->
+<section class="vancouver-area">
+    <h2>Museums & Galleries</h2>
+    <div class="card-grid">
+
+        <div class="activity-card paid free" data-photo="Canadian War Museum Ottawa">
+            <img class="activity-img" />
+            <h3>Canadian War Museum</h3>
+            <p><strong>Highlights:</strong> Award-winning architecture, tanks and military vehicles, interactive exhibits, and Canada’s full wartime history.</p>
+            <p><strong>Cost:</strong> ~$20 CAD (Free on Thursdays, 5 pm – 8 pm)</p>
+            <p><strong>Tips:</strong> Don’t skip the LeBreton Gallery — it’s where the massive tanks and artillery are displayed.</p>
+        </div>
+
+        <div class="activity-card paid free" data-photo="National Gallery of Canada Ottawa">
+            <img class="activity-img" />
+            <h3>National Gallery of Canada</h3>
+            <p><strong>Highlights:</strong> World-class art museum, glass cathedral-style architecture, Indigenous art collections, and the iconic “Maman” spider sculpture.</p>
+            <p><strong>Cost:</strong> ~$20 CAD (Free on Thursdays, 5 pm – 8 pm)</p>
+            <p><strong>Tips:</strong> Head up to the Great Hall — best panoramic views of Parliament and the river.</p>
+        </div>
+
+        <div class="activity-card paid free" data-photo="Canadian Museum of History Gatineau">
+            <img class="activity-img" />
+            <h3>Canadian Museum of History</h3>
+            <p><strong>Highlights:</strong> Incredible Grand Hall with towering totem poles, detailed First Peoples exhibits, and an IMAX theatre.</p>
+            <p><strong>Cost:</strong> ~$22 CAD (Free on Thursdays, 5 pm – 8 pm)</p>
+            <p><strong>Tips:</strong> Cross the river viewpoint outside — amazing skyline shots of Parliament from Gatineau.</p>
+        </div>
+
+        <div class="activity-card paid free" data-photo="Bank of Canada Museum Ottawa">
+            <img class="activity-img" />
+            <h3>Bank of Canada Museum</h3>
+            <p><strong>Highlights:</strong> History of Canadian money, interactive finance exhibits, and a surprisingly fun look at currency and economics.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Perfect rainy-day option — it’s quick, central, and rarely crowded.</p>
+        </div>
+
+        <div class="activity-card paid free" data-photo="Canada Aviation and Space Museum Ottawa">
+            <img class="activity-img" />
+            <h3>Canada Aviation & Space Museum</h3>
+            <p><strong>Highlights:</strong> Massive aircraft collection, aviation tech, cockpits, and Canada’s space exploration exhibits.</p>
+            <p><strong>Cost:</strong> ~$18 CAD (Free on Thursdays, 5 pm – 8 pm)</p>
+            <p><strong>Tips:</strong> The Cold War jet section and helicopter lineup are fan favorites — give extra time if you like engineering.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Landmarks & Scenic Spots -->
+<section class="vancouver-area">
+    <h2>Landmarks & Scenic Spots</h2>
+    <div class="card-grid">
+
+        <div class="activity-card free" data-photo="Rideau Canal Ottawa">
+            <img class="activity-img" />
+            <h3>Rideau Canal</h3>
+            <p><strong>Highlights:</strong> UNESCO World Heritage Site, scenic walking and biking paths, iconic views of Parliament and Chateau Laurier.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> The canal-side trail between the locks and Dow’s Lake is the most picturesque stretch.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Rideau Falls Ottawa">
+            <img class="activity-img" />
+            <h3>Rideau Falls</h3>
+            <p><strong>Highlights:</strong> Twin waterfalls flowing into the Ottawa River, scenic viewpoints, peaceful lookout spots.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Best during spring and early summer; bring a camera for river views.</p>
+        </div>
+
+        <div class="activity-card free paid" data-photo="Dow's Lake Ottawa">
+            <img class="activity-img" />
+            <h3>Dow’s Lake</h3>
+            <p><strong>Highlights:</strong> Lakeside boardwalk, gardens, canoe/pedal-boat rentals, peaceful waterfront vibes.</p>
+            <p><strong>Cost:</strong> Free (rentals ~$25–40)</p>
+            <p><strong>Tips:</strong> Go around sunset — the golden hour reflections on the lake are gorgeous.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Rideau Hall Ottawa">
+            <img class="activity-img" />
+            <h3>Rideau Hall</h3>
+            <p><strong>Highlights:</strong> Official residence of the Governor General, ceremonial guards, beautifully landscaped grounds.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Check if the ceremonial guard is scheduled — great photos and minimal crowds.</p>
+        </div>
+
+        <div class="activity-card free" data-photo="Notre Dame Cathedral Ottawa">
+            <img class="activity-img" />
+            <h3>Notre-Dame Cathedral</h3>
+            <p><strong>Highlights:</strong> Stunning twin-spire basilica, ornate interior, painted ceilings, and peaceful atmosphere.</p>
+            <p><strong>Cost:</strong> Free</p>
+            <p><strong>Tips:</strong> Interior photography is allowed — visit on a sunny day for the stained-glass lighting.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Tours & Experiences -->
+<section class="vancouver-area">
+    <h2>Tours & Experiences</h2>
+    <div class="card-grid">
+
+        <div class="activity-card paid" data-photo="Haunted Walk Ottawa">
+            <img class="activity-img" />
+            <h3>Haunted Walk of Ottawa</h3>
+            <p><strong>Highlights:</strong> Ghost stories, prison tours, nighttime walking tour.</p>
+            <p><strong>Cost:</strong> ~$27 CAD</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="Ottawa River Cruise Aquabus">
+            <img class="activity-img" />
+            <h3>Aquabus on Ottawa River</h3>
+            <p><strong>Highlights:</strong> Scenic cruise with views of Parliament, bridges, and Gatineau; relaxing and perfect for sunset.</p>
+            <p><strong>Cost:</strong> ~$30 CAD</p>
+            <p><strong>Tips:</strong> Choose the sunset departure — the light on Parliament is unreal.</p>
+        </div>
+
+        <div class="activity-card paid" data-photo="Royal Canadian Mint Ottawa">
+            <img class="activity-img" />
+            <h3>Royal Canadian Mint</h3>
+            <p><strong>Highlights:</strong> See how collector coins are made, hold a real gold bar, guided tours through the facility.</p>
+            <p><strong>Cost:</strong> ~$12 CAD</p>
+            <p><strong>Tips:</strong> Tours are timed — book your slot early in the day.</p>
+        </div>
+
+    </div>
+</section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
